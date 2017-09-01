@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/nanopool-stats.css') }}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="{{ url_for('static', filename='js/js-cookie.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/nanopool-stats.js') }}"></script>
+</head>
+<body>
+    <header class="relative">
+        <div class="inline-block">
+            <div id="requestpath">{{ request.path }}</div>
+            <div id="pagetitle">{{ pagetitle }}</div>
+        </div>
+        <div class="nowrap bottom-right-float inline-block">
+            <div class="inline-block middle">
+                <div id="wallet_address" class="middle inline-block"></div>
+                <button class="middle inline-block" id="update_button">Update</button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <input id="address" type="textbox">
+    </main>
+</body>
+</html>
